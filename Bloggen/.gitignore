@@ -2,7 +2,7 @@
 
 
 # API-key
-/environments
+/environments/environments.ts
 
 # compiled output
 /dist
