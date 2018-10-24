@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div (click)="navigate(frontpagePost.id)" class="col l12 s12 center">
+      <div class="article-wrapper">
+        <img src="{{frontpagePost.frontpageUrl}}">
+        <p>{{frontpagePost.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-article-grid></app-article-grid>

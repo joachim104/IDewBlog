@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let post of articleGridPosts">
+      <div (click)="navigate(post.id)" class="col l4 s12 center">
+        <div class="article-wrapper">
+          <img src={{post.imageUrl}}>
+          <p>{{ post.title }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

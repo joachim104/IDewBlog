@@ -1,0 +1,35 @@
+img {
+    height: 290px;
+    width: 75%;
+    -webkit-box-shadow: 0 1px 1px #777;
+    -moz-box-shadow: 0 1px 1px #777;
+    box-shadow: 0 1px 1px #777;
+}
+
+.row {
+  cursor: pointer;
+}
+
+  .title {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+  }
+
+  .description {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #808080;
+  }
+
+  .date {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: #808080;
+  } 
+
+
+  @media only screen and (max-width: 600px) {
+    img {
+        width: 100%;
+    }
+}

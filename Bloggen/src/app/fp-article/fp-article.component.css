@@ -1,0 +1,10 @@
+img {
+    width: 90%;
+    height: 90%;
+    }
+    
+.article-wrapper {
+        cursor: pointer;
+        font-family: 'Lato', sans-serif;
+        font-size: 32px;
+    }
