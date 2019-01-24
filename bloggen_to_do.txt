@@ -1,0 +1,18 @@
+1. search bar
+ - få den til at fungere
+ - dropdown skal fikses
+ - generelt design
+ - hvis post.title er for lang får den 2 emner i search dropdown
+ - evt. pil-ned funktion
+
+2. mobil visning 
+ - category view
+ - search bar
+ - 
+
+3. design
+ - fix font
+ - 
+
+4. footer 
+ - social medier 
