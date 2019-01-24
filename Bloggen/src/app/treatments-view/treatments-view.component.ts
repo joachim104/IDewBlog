@@ -28,10 +28,8 @@ export class TreatmentsViewComponent implements OnInit {
     }) 
   }
 
-  private navigate (postId) {
-
+  public navigate (postId) {
     this.router.navigate(['/article-view', postId]);
-
   }
 
 }

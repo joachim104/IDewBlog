@@ -1,0 +1,40 @@
+.container {
+    /* text-align: center; */
+    font-family: 'Lato', sans-serif;
+}
+
+.text {
+  margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+p>img{
+  display: block;
+  margin: 0 auto;
+}
+
+.fancy {
+    line-height: 0.5;
+    text-align: center;
+  }
+  .fancy span {
+    display: inline-block;
+    position: relative;  
+  }
+  .fancy span:before,
+  .fancy span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 0;
+    width: 100%;
+  }
+  .fancy span:before {
+    right: 100%;
+    margin-right: 15px;
+  }
+  .fancy span:after {
+    left: 100%;
+    margin-left: 15px;
+  }

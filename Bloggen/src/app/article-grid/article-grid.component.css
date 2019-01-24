@@ -1,9 +1,6 @@
 img {
 width: 70%;
 height: 70%;
--webkit-box-shadow: 0 1px 1px #777;
--moz-box-shadow: 0 1px 1px #777;
-box-shadow: 0 1px 1px #777;
 }
 
 .article-wrapper {

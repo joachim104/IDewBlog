@@ -21,10 +21,10 @@ export class DatabaseService {
         let post: Post;
         // console.log(articles)
         articles.forEach((article) => {
-          console.log("artic", article)
+          // console.log("artic", article)
           let date = moment(article.fields.date).locale('da').format('LL')
-          console.log(date)
-          console.log(article.sys.id, "id")
+          // console.log(date)
+          // console.log(article.sys.id, "id")
 
           // console.log(article.fields.date.format('DD-MM-YYYY'))
           post = {

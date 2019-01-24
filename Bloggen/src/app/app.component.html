@@ -1,34 +1,63 @@
- <!-- Kan søge-funktionen virke med contentful?  -->
- 
- <!-- NAVBAR! -->
+<div class="con">
+  <!-- NAVBAR! -->
   <nav class="white">
-      <div class="nav-wrapper">
-        <a href="#!" class="center brand-logo">Idew</a>
-        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="hide-on-med-and-down">
-          <div class="navbar-items">
-              <li><a class="hover-item" routerLink="treatments-view">TREATMENTS</a></li>
-              <li><a class="hover-item" routerLink="skincare-view">SKINCARE</a></li>
-              <li><a class="hover-item" routerLink="hair-view">HAIR & NAILS</a></li>
-              <li><a class="hover-item" routerLink="beauty-view">BEAUTY</a></li>
-              <li><a class="hover-item" routerLink="forever-view">FOREVER GOOD</a></li>
-          </div>        
-        </ul>
-      </div>  
-    </nav>
-    
-    <!-- NAVBAR MOBIL -->
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">TREATMENTS</a></li>
-        <li><a href="badges.html">SKINCARE</a></li>
-        <li><a href="collapsible.html">HAIR & NAILS</a></li>
-        <li><a href="mobile.html">BEAUTY</a></li>
-        <li><a href="mobile.html">FOREVER GOOD</a></li>    
-    </ul>
-
-    <router-outlet></router-outlet>
+    <div class="nav-wrapper">
+      <a href="#!" class="center brand-logo">Idew</a>
 
 
+      <div class="right search-field searchBox">
 
-    <!-- FOOTER -->
-    
+        <form [formGroup]="postForm" novalidate>
+          <input placeholder="Search..." (click)="openDropdown()" formControlName="searchControl" class="input-field"
+            ng-model="searchbox">
+        </form>
+
+        <div *ngIf="postForm.value.searchControl">
+          <div *ngIf="this.showDropdown == true && postForm.value.searchControl.length > 2" class="post-container-dropdown"
+            id='style-4'>
+              <div (click)="selectPost(s)" class="post" *ngFor="let post of posts | search:getSearchValue() " style="color: black">
+                <div (click)="navigate(post.id)">{{post.title}}</div>
+              </div>
+          </div>
+        </div>
+        <!-- 
+      <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+
+      <ul class="search-result">
+        <li *ngFor="let hero of heroes$ | async">
+          <a routerLink="/detail/{{hero.id}}">
+            {{hero.name}}
+          </a>
+        </li>
+      </ul> -->
+
+
+      </div>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="hide-on-med-and-down">
+        <div class="navbar-items">
+          <li><a class="hover-item" routerLink="treatments-view">TREATMENTS</a></li>
+          <li><a class="hover-item" routerLink="skincare-view">SKINCARE</a></li>
+          <li><a class="hover-item" routerLink="hair-view">HAIR & NAILS</a></li>
+          <li><a class="hover-item" routerLink="beauty-view">BEAUTY</a></li>
+          <li><a class="hover-item" routerLink="forever-view">FOREVER GOOD</a></li>
+        </div>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- NAVBAR MOBIL -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">TREATMENTS</a></li>
+    <li><a href="badges.html">SKINCARE</a></li>
+    <li><a href="collapsible.html">HAIR & NAILS</a></li>
+    <li><a href="mobile.html">BEAUTY</a></li>
+    <li><a href="mobile.html">FOREVER GOOD</a></li>
+  </ul>
+
+  <router-outlet></router-outlet>
+</div>
+
+
+<!-- FOOTER -->

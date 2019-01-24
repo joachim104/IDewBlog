@@ -21,7 +21,7 @@ export class FpArticleComponent implements OnInit {
   ngOnInit() {
     
     this.databaseService.addPostsToArray().then(list   => {
-      console.log("as", list)
+      // console.log("as", list)
       list.forEach(item => {
         // console.log(item.showOnFrontpage)
       })

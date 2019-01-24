@@ -1,7 +1,10 @@
-<div *ngIf="post">
-  <div>
-    <div>{{post.category}}</div>
-    <h3>{{post.title}}</h3>
-    <div>{{post.date}}</div>
+<div class="container">
+  <div *ngIf="post" class="col l12 s12">
+    <div class="center">
+      <div>{{post.category}}</div>
+      <h4>{{post.title}}</h4>
+      <p class="subtitle fancy"><span>{{post.date}}</span></p>
+    </div>
+    <div class="text" id="test" [innerHTML]="post.text | mdToHtml"></div>
   </div>
 </div>
