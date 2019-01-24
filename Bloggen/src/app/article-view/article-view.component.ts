@@ -18,7 +18,8 @@ export class ArticleViewComponent implements OnInit {
 
   constructor(private databaseService: DatabaseService, private router: Router, private route: ActivatedRoute,
     private contetfulService: ContentfulService) { }
-  private post: Post;
+
+  public post: Post;
 
   ngOnInit() {
     console.log("test")

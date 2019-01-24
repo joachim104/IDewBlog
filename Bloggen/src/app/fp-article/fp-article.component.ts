@@ -13,7 +13,7 @@ import { Post } from '../entities/post';
 export class FpArticleComponent implements OnInit {
 
   posts : Post[] = [];
-  frontpagePost = {};
+  frontpagePost: Post;
   constructor(private router: Router, private databaseService : DatabaseService) { }
 
   
@@ -32,10 +32,8 @@ export class FpArticleComponent implements OnInit {
     }) 
   }
 
-  private navigate (postId) {
-
+  public navigate (postId) {
     this.router.navigate(['/article-view', postId]);
-
   }
 
 }
